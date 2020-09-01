@@ -1,3 +1,8 @@
+## Installation
+pip install datrics
+
+## Usage
+
 ### CLI help
 datrics --help
 
