@@ -1,0 +1,8 @@
+version: 1.0
+title: {{cookiecutter.brick_name}}
+outputs:
+  - name: data
+    type: data
+inputs:
+  - name: data
+    type: data
