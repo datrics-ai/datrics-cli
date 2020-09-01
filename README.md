@@ -4,25 +4,46 @@ pip install datrics
 ## Usage
 
 ### CLI help
-datrics --help
+It will show all existing commands:
+
+  datrics --help
 
 ### Create custom bricks repository
-datrics init
+It will initialize folder with datrics configuration file:
+  
+  datrics init
+
+
+### Setup the connection to datrics environment
+By default datrics-cli is connected to datrics SaaS environment, 
+but if you need to connect to your custom environment or to any
+predefined envs you can run this command and pass url of 
+your environment.
+
+  datrics env
+
 
 ### Login to Datrics user account
-datrics login
+To login to you user account and make it possible to 
+load projects or to push bricks you should run:
+
+  datrics login
 
 ### Logout on Datrics user account
-datrics logout
 
-### Create template brick locally
-datrics create
+  datrics logout
+
+### Initialize brick boilerplate
+To bootstrap the creation of your custom brick run the next command.
+CLI will create folders and files structure for you
+
+  datrics create
 
 ### Push (create or update) brick on Datrics user account
-datrics push
+It will push the changes that you've made in the code to the platform
 
-### Projects on Datrics user account
-datrics projects
+  datrics push
 
-### Change url to base api url
-datrics env
+### List of projects on your Datrics user account
+  
+  datrics projects
