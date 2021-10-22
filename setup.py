@@ -19,7 +19,7 @@ dependency_links = [x.strip().replace('git+', '') for x in all_reqs \
 setup (
     name = 'datrics',
     description = 'CLI for datrics.ai platform that allows you to create and manage custom bricks',
-    version = '0.0.3',
+    version = '0.0.4',
     packages = find_packages(), # list of all packages
     package_data={
         "datrics": ["services/template_brick/*.json", "services/template_brick/{{cookiecutter.brick_directory_name}}/*"],
@@ -45,6 +45,14 @@ setup (
     ]
 )
 
-# python3 -m setup.py sdist bdist_wheel
+# build
+# python3 -m setup sdist bdist_wheel
+
+## upload to production
+# python3 -m twine upload --repository-url https://upload.pypi.org/legacy/ dist/*
+
+## upload to test
 # python3 -m twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+
+# install specific version
 # python3 -m pip install -i https://test.pypi.org/simple/ datrics==0.0.{version}
